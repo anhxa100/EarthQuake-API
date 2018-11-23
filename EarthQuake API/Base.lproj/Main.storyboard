@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bng-Zx-bco">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,87 +15,97 @@
             <objects>
                 <tableViewController id="rff-6d-QCP" customClass="QuakeReportTableViewController" customModule="EarthQuake_API" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="a9S-dc-4KF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="53" id="ttV-Nq-JyY" customClass="TableViewCell" customModule="EarthQuake_API" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="53"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="92" id="ttV-Nq-JyY" customClass="TableViewCell" customModule="EarthQuake_API" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="92"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ttV-Nq-JyY" id="2yd-TY-azs">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="52.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bmE-up-zPJ">
-                                            <rect key="frame" x="4" y="4" width="367" height="44.5"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mBp-oX-vbA">
+                                            <rect key="frame" x="82" y="19" width="55.333333333333343" height="54"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mag" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdW-zE-Hmu" customClass="Label" customModule="EarthQuake_API" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="44.5" height="44.5"/>
-                                                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="TdW-zE-Hmu" secondAttribute="height" id="SUV-74-PnZ"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eD-cx-a9p">
+                                                    <rect key="frame" x="0.0" y="0.0" width="55.333333333333336" height="23"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Distance">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.63522332910000001" green="0.63533496860000005" blue="0.63521629570000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="14" name=".SFNSText"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rz-ip-L1h">
+                                                    <rect key="frame" x="0.0" y="31" width="55.333333333333336" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="-1"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JM7-Rr-JGt" userLabel="Distance Location">
-                                                    <rect key="frame" x="52.5" y="0.0" width="231.5" height="44.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAB-42-Vda">
-                                                            <rect key="frame" x="0.0" y="0.0" width="231.5" height="18.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="textColor" red="0.63522332910000001" green="0.63533496860000005" blue="0.63521629570000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9H-vA-wFi">
-                                                            <rect key="frame" x="0.0" y="26.5" width="231.5" height="18"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QsP-6u-SCi" userLabel="Data Time">
-                                                    <rect key="frame" x="292" y="0.0" width="75" height="44.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqT-4h-wh8">
-                                                            <rect key="frame" x="0.0" y="0.0" width="75" height="18"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="textColor" red="0.63522332910000001" green="0.63533496860000005" blue="0.63521629570000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7O-cn-cZA">
-                                                            <rect key="frame" x="0.0" y="26" width="75" height="18.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="textColor" red="0.63522332910000001" green="0.63533496860000005" blue="0.63521629570000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
                                             </subviews>
                                         </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wpQ-k3-c7z">
+                                            <rect key="frame" x="311.33333333333331" y="19" width="82.666666666666686" height="54"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evC-Gm-JYw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.63522332910000001" green="0.63533496860000005" blue="0.63521629570000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="has-09-2Ea">
+                                                    <rect key="frame" x="0.0" y="31" width="82.666666666666671" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.63522332910000001" green="0.63533496860000005" blue="0.63521629570000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdZ-zq-YP5" customClass="Label" customModule="EarthQuake_API" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="19" width="54" height="54"/>
+                                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="xdZ-zq-YP5" secondAttribute="height" id="Bg3-Z1-KMp"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="-1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="QsP-6u-SCi" firstAttribute="width" secondItem="2yd-TY-azs" secondAttribute="width" multiplier="1/5" id="4Aj-ca-grK"/>
-                                        <constraint firstItem="bmE-up-zPJ" firstAttribute="top" secondItem="2yd-TY-azs" secondAttribute="top" constant="4" id="5cs-Ou-SuY"/>
-                                        <constraint firstAttribute="bottom" secondItem="bmE-up-zPJ" secondAttribute="bottom" constant="4" id="Stl-FK-Fyx"/>
-                                        <constraint firstAttribute="trailing" secondItem="bmE-up-zPJ" secondAttribute="trailing" constant="4" id="igQ-ez-4Lj"/>
-                                        <constraint firstItem="bmE-up-zPJ" firstAttribute="leading" secondItem="2yd-TY-azs" secondAttribute="leading" constant="4" id="uG8-b3-Zaq"/>
+                                        <constraint firstItem="mBp-oX-vbA" firstAttribute="top" secondItem="xdZ-zq-YP5" secondAttribute="top" id="Kwj-z9-02V"/>
+                                        <constraint firstItem="wpQ-k3-c7z" firstAttribute="bottom" secondItem="xdZ-zq-YP5" secondAttribute="bottom" id="TBs-WL-GrJ"/>
+                                        <constraint firstItem="xdZ-zq-YP5" firstAttribute="leading" secondItem="2yd-TY-azs" secondAttribute="leadingMargin" id="UJy-N7-6By"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="xdZ-zq-YP5" secondAttribute="bottom" constant="8" id="eSX-Ye-TQq"/>
+                                        <constraint firstItem="xdZ-zq-YP5" firstAttribute="top" secondItem="2yd-TY-azs" secondAttribute="topMargin" constant="8" id="gfB-lm-EZK"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="wpQ-k3-c7z" secondAttribute="trailing" id="i7V-rO-ZgC"/>
+                                        <constraint firstItem="wpQ-k3-c7z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mBp-oX-vbA" secondAttribute="trailing" constant="8" id="rFi-od-Zbp"/>
+                                        <constraint firstItem="mBp-oX-vbA" firstAttribute="leading" secondItem="xdZ-zq-YP5" secondAttribute="trailing" constant="8" id="tDm-ys-X97"/>
+                                        <constraint firstItem="wpQ-k3-c7z" firstAttribute="top" secondItem="xdZ-zq-YP5" secondAttribute="top" id="yP3-HX-qiE"/>
+                                        <constraint firstItem="mBp-oX-vbA" firstAttribute="bottom" secondItem="xdZ-zq-YP5" secondAttribute="bottom" id="zeI-Le-R1b"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.82467480959999995" green="0.82467480959999995" blue="0.82467480959999995" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="wpQ-k3-c7z" firstAttribute="width" secondItem="ttV-Nq-JyY" secondAttribute="width" multiplier="1/5" id="C56-aB-XcH"/>
+                                </constraints>
                                 <connections>
-                                    <outlet property="dateLabel" destination="IqT-4h-wh8" id="ZuI-fD-ORl"/>
-                                    <outlet property="distanceLabel" destination="QAB-42-Vda" id="aHi-BS-vAG"/>
-                                    <outlet property="locationLabel" destination="u9H-vA-wFi" id="3X5-Tw-K1B"/>
-                                    <outlet property="magLabel" destination="TdW-zE-Hmu" id="1wm-2E-ujd"/>
-                                    <outlet property="timeLabel" destination="Q7O-cn-cZA" id="Y0V-VK-Ftd"/>
+                                    <outlet property="dateLabel" destination="evC-Gm-JYw" id="iUN-ik-jKS"/>
+                                    <outlet property="distanceLabel" destination="2eD-cx-a9p" id="7CL-NN-bxH"/>
+                                    <outlet property="locationLabel" destination="2rz-ip-L1h" id="wvS-lf-249"/>
+                                    <outlet property="magLabel" destination="xdZ-zq-YP5" id="PyT-DO-Eal"/>
+                                    <outlet property="timeLabel" destination="has-09-2Ea" id="Lf7-GN-vqw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -108,7 +118,74 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="izd-jV-MId" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1127.2" y="147.97601199400302"/>
+            <point key="canvasLocation" x="1063.768115942029" y="147.55434782608697"/>
+        </scene>
+        <!--Quake Detail View Controller-->
+        <scene sceneID="3dQ-A7-xMu">
+            <objects>
+                <viewController storyboardIdentifier="QuakeDetailViewController" id="Ak0-I7-IRH" customClass="QuakeDetailViewController" customModule="EarthQuake_API" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oI0-sy-kfd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wfT-i1-HN9">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="I6U-M5-rRX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wa5-fu-1Pa">
+                        <barButtonItem key="rightBarButtonItem" title="Detail" id="Gkn-Tv-QMu">
+                            <connections>
+                                <action selector="gotoDetail:" destination="Ak0-I7-IRH" id="pHm-SN-W3V"/>
+                                <segue destination="Ehs-Kb-vfj" kind="show" id="jUS-uL-GBh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qZ6-CZ-2AB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064" y="840"/>
+        </scene>
+        <!--Quake More Detail Table View Controller-->
+        <scene sceneID="nHN-zW-PAn">
+            <objects>
+                <tableViewController id="Ehs-Kb-vfj" customClass="QuakeMoreDetailTableViewController" customModule="EarthQuake_API" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lMv-Ma-bpI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="232" id="m1U-n5-RWQ" customClass="MoreDetailTableViewCell" customModule="EarthQuake_API" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="232"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m1U-n5-RWQ" id="i3U-fc-PoI">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="231.66666666666666"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.82467480959999995" green="0.82467480959999995" blue="0.82467480959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ehs-Kb-vfj" id="LV4-ci-W0E"/>
+                            <outlet property="delegate" destination="Ehs-Kb-vfj" id="9cb-09-HEu"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cGu-cX-c9b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="840"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lwu-Rv-fvJ">
@@ -116,7 +193,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bng-Zx-bco" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G0y-Ra-EaA">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -127,6 +204,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33P-Pk-M5U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="188" y="147.97601199400302"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PyQ-7Z-QeL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OUv-Gj-Wr1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="agH-50-8zB">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ak0-I7-IRH" kind="relationship" relationship="rootViewController" id="tKa-ch-htP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jXX-V9-cSk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="187" y="840"/>
         </scene>
     </scenes>
 </document>
