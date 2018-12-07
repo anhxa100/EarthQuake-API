@@ -9,11 +9,23 @@
 import Foundation
 import UIKit
 
+
+extension UIColor {
+    static func colorFormHex(hex: UInt32) -> UIColor{
+        let div = CGFloat (255)
+        let red = CGFloat ((hex & 0xFF0000) >> 16) / div
+        let green = CGFloat((hex & 0x00FF00) >> 8) / div
+        let blue  = CGFloat(hex & 0x0000FF)  / div
+        return UIColor(red: red, green: green, blue: blue, alpha:  1)
+    }
+}
+
 @IBDesignable
 class View : UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
         if cornerRadius == -1 {
             self.layer.cornerRadius = self.bounds.width < self.bounds.height ? self.bounds.width * 0.5 : self.bounds.height * 0.5
         }

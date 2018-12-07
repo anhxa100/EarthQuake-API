@@ -23,8 +23,6 @@ class QuakeReportTableViewController: UITableViewController {
         refresh.tintColor = UIColor(red:0.25, green:0.72, blue:0.85, alpha:1.0)
         
         tableView.rowHeight = 80
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,11 +61,46 @@ class QuakeReportTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
         
+        let magNum = quakeInfos[indexPath.row].mag
+        
+        //MARK: set color for mag label
+        if magNum > 0 && magNum < 2 {
+            cell.magLabel.backgroundColor = UIColor.colorFormHex(hex: 0x4A7BA7)
+        }
+        if magNum >= 2 && magNum < 3 {
+            cell.magLabel.backgroundColor = UIColor.colorFormHex(hex: 0x04B4B3)
+        }
+        if magNum >= 3 && magNum < 4 {
+            cell.magLabel.backgroundColor = UIColor.colorFormHex(hex: 0x10CAC9)
+        }
+        if magNum >= 4 && magNum < 5 {
+            cell.magLabel.backgroundColor = UIColor.colorFormHex(hex: 0xF5A623)
+        }
+        if magNum >= 5 && magNum < 6 {
+            cell.magLabel.backgroundColor = UIColor.colorFormHex(hex: 0xFF7D50)
+        }
+        if magNum >= 6 && magNum < 7 {
+            cell.magLabel.backgroundColor = UIColor.colorFormHex(hex: 0xFC6644)
+        }
+        if magNum >= 7 && magNum < 8 {
+            cell.magLabel.backgroundColor = UIColor.colorFormHex(hex: 0xE75F40)
+        }
+        if magNum >= 8 && magNum < 9 {
+            cell.magLabel.backgroundColor = UIColor.colorFormHex(hex: 0xE13A20)
+        }
+        if magNum >= 9 && magNum < 10 {
+            cell.magLabel.backgroundColor = UIColor.colorFormHex(hex: 0xD93218)
+        }
+        if magNum > 10 {
+            cell.magLabel.backgroundColor = UIColor.colorFormHex(hex: 0xC03823)
+        }
+        
         cell.magLabel.text = String(quakeInfos[indexPath.row].mag)
         cell.distanceLabel.text = quakeInfos[indexPath.row].place.uppercased()
         cell.locationLabel.text? = quakeInfos[indexPath.row].location
         cell.timeLabel.text = quakeInfos[indexPath.row].timeString
         cell.dateLabel.text = quakeInfos[indexPath.row].dateString
+        
         
         return cell
     }
@@ -81,8 +114,6 @@ class QuakeReportTableViewController: UITableViewController {
 
     }
    
-    
-    
     
 }
 
